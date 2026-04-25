@@ -18,6 +18,13 @@ subs_keyboard = [
 
 subs_markup = ReplyKeyboardMarkup(subs_keyboard, resize_keyboard=True)
 
+buy_keyboard = [
+    ["🛒 شراء"],
+    ["🔙 رجوع"]
+]
+
+buy_markup = ReplyKeyboardMarkup(buy_keyboard, resize_keyboard=True)
+
 # /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("أهلا فيك 👋 اختر:", reply_markup=main_markup)
@@ -34,17 +41,17 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("تواصل معنا هنا 👇\nhttps://t.me/GeorgeBazah")
 
     # الاشتراكات
-    elif text == "⏱ ساعة":
-        await update.message.reply_text("اشتراك ساعة\nالسعر: 1$\n\nإذا بدك تكمل اكتب: شراء ساعة")
+       elif text == "⏱ ساعة":
+        await update.message.reply_text("اشتراك ساعة\nالسعر: 1$", reply_markup=buy_markup)
 
     elif text == "⏱ ساعتين":
-        await update.message.reply_text("اشتراك ساعتين\nالسعر: 2$\n\nإذا بدك تكمل اكتب: شراء ساعتين")
+        await update.message.reply_text("اشتراك ساعتين\nالسعر: 2$", reply_markup=buy_markup)
 
     elif text == "📅 أسبوع":
-        await update.message.reply_text("اشتراك أسبوع\nالسعر: 5$\n\nإذا بدك تكمل اكتب: شراء أسبوع")
+        await update.message.reply_text("اشتراك أسبوع\nالسعر: 5$", reply_markup=buy_markup)
 
     elif text == "📅 شهر":
-        await update.message.reply_text("اشتراك شهر\nالسعر: 15$\n\nإذا بدك تكمل اكتب: شراء شهر")
+        await update.message.reply_text("اشتراك شهر\nالسعر: 15$", reply_markup=buy_markup)
 
     elif text == "🔙 رجوع":
         await update.message.reply_text("رجعنا للقائمة الرئيسية", reply_markup=main_markup)
