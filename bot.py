@@ -34,7 +34,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("تواصل معنا هنا 👇\nhttps://t.me/GeorgeBazah")
 
     # الاشتراكات
-        elif text == "⏱ ساعة":
+    elif text == "⏱ ساعة":
         await update.message.reply_text("اشتراك ساعة\nالسعر: 1$\n\nإذا بدك تكمل اكتب: شراء ساعة")
 
     elif text == "⏱ ساعتين":
