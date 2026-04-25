@@ -1,7 +1,7 @@
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-ADMIN_ID = 1033158867   # حط هون Telegram ID تبعك
+ADMIN_ID =1033158867
 QR_IMAGE = "shamcash_qr.jpg"   # اسم صورة QR بنفس المجلد
 
 # القائمة الرئيسية
