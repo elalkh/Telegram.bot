@@ -34,17 +34,17 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("تواصل معنا هنا 👇\nhttps://t.me/GeorgeBazah")
 
     # الاشتراكات
-    elif text == "⏱ ساعة":
-        await update.message.reply_text("سعر الاشتراك ساعة: 1$")
+        elif text == "⏱ ساعة":
+        await update.message.reply_text("اشتراك ساعة\nالسعر: 1$\n\nإذا بدك تكمل اكتب: شراء ساعة")
 
     elif text == "⏱ ساعتين":
-        await update.message.reply_text("سعر الاشتراك ساعتين: 2$")
+        await update.message.reply_text("اشتراك ساعتين\nالسعر: 2$\n\nإذا بدك تكمل اكتب: شراء ساعتين")
 
     elif text == "📅 أسبوع":
-        await update.message.reply_text("سعر الاشتراك أسبوع: 5$")
+        await update.message.reply_text("اشتراك أسبوع\nالسعر: 5$\n\nإذا بدك تكمل اكتب: شراء أسبوع")
 
     elif text == "📅 شهر":
-        await update.message.reply_text("سعر الاشتراك شهر: 15$")
+        await update.message.reply_text("اشتراك شهر\nالسعر: 15$\n\nإذا بدك تكمل اكتب: شراء شهر")
 
     elif text == "🔙 رجوع":
         await update.message.reply_text("رجعنا للقائمة الرئيسية", reply_markup=main_markup)
